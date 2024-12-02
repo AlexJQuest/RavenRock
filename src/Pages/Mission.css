@@ -1,0 +1,42 @@
+.mission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light background for contrast */
+    min-height: 80px;
+}
+
+.top-image {
+    width: 100%;
+    max-width: 600px; /* Limit the max width */
+    border-radius: 10px; /* Rounded corners for image */
+    margin-bottom: 20px; /* Spacing below the image */
+}
+
+.mission-card {
+    background-color: #fff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Internal spacing */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit the max width */
+}
+
+.mission-card h1 {
+    font-size: 24px; /* Font size for the main heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.mission-card h2 {
+    font-size: 20px; /* Font size for subheading */
+    margin-bottom: 15px; /* Space below subheading */
+    color: #ff0000; /* Optional: Change the color */
+}
+
+.mission-card p {
+    font-size: 16px; /* Font size for the paragraph */
+    line-height: 1.5; /* Line height for better readability */
+    color: #333; /* Darker text color for contrast */
+}

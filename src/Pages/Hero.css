@@ -1,0 +1,88 @@
+/* Reset some basic styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%; /* Ensure body takes full height */
+}
+
+.stylist {
+  display: flex;
+  position: relative; /* Needed for absolute positioning of the background */
+  min-height: auto; /* Ensure full viewport height */
+  padding: 2%;
+  background-color: rgba(1, 29, 65, 1); /* Keep the same background color */
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row; /* Default to row layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center content horizontally */
+  box-sizing: border-box; /* Include padding in the width */
+  text-align: left; /* Left-align text */
+  gap: 80px; /* Space between columns */
+  width: 100vw; /* Full width */
+  z-index: 1; /* Stack above the background */
+}
+
+.text-column, .image-column {
+  flex: 1; /* Allow columns to grow and shrink equally */
+  max-width: 500px; /* Restrict max width for large screens */
+  color: #ffffff; /* Text color */
+}
+
+.imagebackgroundright {
+  position: absolute; /* Position this element absolutely */
+  right: 0; /* Align to the right */
+  top: 0; /* Align to the top */
+  width: 30%; /* Adjust as needed */
+  height: 100%; /* Full height of the parent */
+  background-image: url('https://www.suffolk.com/wp-content/uploads/2020/10/gallery-bg.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  z-index: 0; /* Set lower z-index */
+}
+
+.image-column {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.hero-image {
+  max-width: 100%; /* Responsive image */
+  height: auto;
+  border-radius: 10px; /* Round corners of the image */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #ff0000; /* Primary button color */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #690e0e; /* Darker button color on hover */
+}
+
+/* Responsive design: stack columns vertically on small screens */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack columns vertically */
+    text-align: center; /* Center text horizontally */
+    gap: 30px; /* Space between stacked elements */
+  }
+
+  .text-column, .image-column {
+    max-width: 100%; /* Allow columns to take full width on small screens */
+  }
+
+  .imagebackgroundright {
+    display: none; /* Hide background image on small screens */
+  }
+}
