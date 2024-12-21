@@ -1,88 +1,122 @@
-/* Reset some basic styles */
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  height: 100%; /* Ensure body takes full height */
-}
-
-.stylist {
+/* General Section Styles for hero-section and hero-section2 */
+.hero-section, .hero-section2 {
   display: flex;
-  position: relative; /* Needed for absolute positioning of the background */
-  min-height: auto; /* Ensure full viewport height */
+  flex-direction: row;
+  width: 100vw;
+  gap: 10%;
+  align-items: center;
+  justify-content: center;
   padding: 2%;
-  background-color: rgba(1, 29, 65, 1); /* Keep the same background color */
+  background-color: rgba(1, 29, 65, 1); /* Keep original background color */
+  color: white;
 }
 
-.hero-section {
-  display: flex;
-  flex-direction: row; /* Default to row layout */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center content horizontally */
-  box-sizing: border-box; /* Include padding in the width */
-  text-align: left; /* Left-align text */
-  gap: 80px; /* Space between columns */
-  width: 100vw; /* Full width */
-  z-index: 1; /* Stack above the background */
+.hero-section .image-column, .hero-section2 .image-column2,
+.hero-section .text-column, .hero-section2 .text-column2 {
+  flex: 1;
+  padding-top: 50px;
+  max-width: 500px;
 }
 
-.text-column, .image-column {
-  flex: 1; /* Allow columns to grow and shrink equally */
-  max-width: 500px; /* Restrict max width for large screens */
-  color: #ffffff; /* Text color */
-}
-
-.imagebackgroundright {
-  position: absolute; /* Position this element absolutely */
-  right: 0; /* Align to the right */
-  top: 0; /* Align to the top */
-  width: 30%; /* Adjust as needed */
-  height: 100%; /* Full height of the parent */
-  background-image: url('https://www.suffolk.com/wp-content/uploads/2020/10/gallery-bg.jpg'); /* Replace with your image URL */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  z-index: 0; /* Set lower z-index */
-}
-
-.image-column {
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-}
-
-.hero-image {
-  max-width: 100%; /* Responsive image */
-  height: auto;
-  border-radius: 10px; /* Round corners of the image */
-}
-
-.cta-button {
+.hero-section .cta-button, .hero-section2 .cta-button2 {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
-  color: #ffffff;
-  background-color: #ff0000; /* Primary button color */
+  color: white;
+  background-color: #ff0000;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #690e0e; /* Darker button color on hover */
+.hero-section .cta-button:hover, .hero-section2 .cta-button2:hover {
+  background-color: #690e0e;
 }
 
-/* Responsive design: stack columns vertically on small screens */
-@media (max-width: 768px) {
-  .hero-section {
+/* Hero Image Styles */
+.hero-image, .hero-image2 {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Mobile View (Optimized for small screens like iPhone SE or smaller screens) */
+@media (max-width: 600px) {
+  .hero-section, .hero-section2 {
     flex-direction: column; /* Stack columns vertically */
-    text-align: center; /* Center text horizontally */
-    gap: 30px; /* Space between stacked elements */
+    text-align: center; /* Center text */
+    padding: 5%; /* Adjust padding for mobile */
   }
 
-  .text-column, .image-column {
-    max-width: 100%; /* Allow columns to take full width on small screens */
+  .hero-section .text-column, .hero-section2 .text-column2 {
+    max-width: 100%; /* Full width on mobile */
   }
 
-  .imagebackgroundright {
-    display: none; /* Hide background image on small screens */
+  .hero-section .cta-button, .hero-section2 .cta-button2 {
+    width: 100%; /* Full width button */
+    padding: 15px 0;
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .hero-section .hero-image, .hero-section2 .hero-image2 {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .imagebackgroundright, .imagebackgroundright2 {
+    display: none; /* Hide background image on mobile */
+  }
+
+  /* Revert order for mobile - Image on the right, text on the left */
+  .hero-section .image-column, .hero-section2 .image-column2 {
+    order: 2; /* Move image to the right */
+  }
+
+  .hero-section .text-column, .hero-section2 .text-column2 {
+    order: 1; /* Move text to the left */
+  }
+}
+
+/* Tablet View (Optimized for iPads and larger tablets) */
+@media (max-width: 1024px) {
+  .hero-section, .hero-section2 {
+    flex-direction: column; /* Stack columns vertically */
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-section .text-column h1, .hero-section2 .text-column2 h1 {
+    font-size: 2rem; /* Adjust heading for tablets */
+  }
+
+  .hero-section .text-column h2, .hero-section2 .text-column2 h2 {
+    font-size: 1.5rem; /* Adjust subtitle */
+  }
+
+  .hero-section .text-column p, .hero-section2 .text-column2 p {
+    font-size: 1.1rem; /* Adjust paragraph font size */
+  }
+
+  .hero-section .cta-button, .hero-section2 .cta-button2 {
+    width: 80%; /* Adjust button width for tablets */
+    padding: 12px 20px;
+    font-size: 1.2rem;
+  }
+
+  .hero-section .hero-image, .hero-section2 .hero-image2 {
+    width: 85%; /* Adjust image size for tablets */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Revert order for tablet - Image on the right, text on the left */
+  .hero-section .image-column, .hero-section2 .image-column2 {
+    order: 2; /* Move image to the right */
+  }
+
+  .hero-section .text-column, .hero-section2 .text-column2 {
+    order: 1; /* Move text to the left */
   }
 }

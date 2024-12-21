@@ -1,7 +1,7 @@
 // DetailsBar.js
 import React from 'react';
 import '../Components/Detailsbar.css';
-import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from 'react-icons/fa';
 
 const DetailsBar = () => {
   return (
@@ -16,7 +16,7 @@ const DetailsBar = () => {
         </div>
         <div className="contact-item">
           <FaEnvelope color="white " />
-          <span>aljay3334@gmail.com</span>
+          <span>ravenrockcontractors@gmail.com</span>
         </div>
       </div>
 
@@ -26,14 +26,17 @@ const DetailsBar = () => {
       </div>
 
       <div className="social-icons">
-        <a href="https://www.facebook.com">
+        <a href="https://www.facebook.com/profile.php?id=61569299262964m">
           <FaFacebook color="#fff" size={20} />
         </a>
-        <a href="https://www.instagram.com">
+        <a href="https://www.instagram.com/ravenrockcontractors/">
           <FaInstagram color="#fff" size={20} />
         </a>
-        <a href="https://www.linkedin.com">
-          <FaLinkedin color="#fff" size={20} />
+        <a href="https://www.tiktok.com/@ravenrockcontractors?lang=en">
+          <FaTiktok color="#fff" size={20} />
+        </a>
+        <a href="https://x.com/RavenRockCon">
+          <FaTwitter color="#fff" size={20} />
         </a>
       </div>
     </div>

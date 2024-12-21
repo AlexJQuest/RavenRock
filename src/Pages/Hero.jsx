@@ -19,31 +19,8 @@ const HeroSection = () => {
               </div>
               
             </section>
-            <div className='imagebackgroundright'>
-            </div>
         </div>
       </div>
     );
   }
 export default HeroSection;
-
-
-
-
-
-
-
-<div className='wrapper'> 
-    <div className='hero-section'>
-        <div className='content-left'>
-
-        </div>
-        <div className='content-right'>
-          
-        </div>
-    </div>
-    <div className='background-image-right'>
-      
-    </div>
-
-</div>

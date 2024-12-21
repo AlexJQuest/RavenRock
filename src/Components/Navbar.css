@@ -23,6 +23,14 @@ html, body {
   z-index: -1; /* Place the video behind other content */
   overflow: hidden; /* Ensure no overflow from video */
 }
+/* Main content sections */
+.main-content {
+  padding-top: 60px; /* Space for fixed navbar */
+  position: center;
+  min-height: 100vh; /* Ensure content section takes full viewport height */
+  box-sizing: border-box;
+  margin-top: 800px;
+}
 
 /* Navbar styling */
 .navbar {
@@ -71,6 +79,11 @@ html, body {
   padding: 0;
   margin: 0;
 }
+.Mission{
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+}
 
 .nav-links li {
   margin: 0 10px;
@@ -104,19 +117,7 @@ html, body {
 .nav-links a:hover::after {
   width: 100%; /* Reveals the underline */
 }
-.Mission{
-  display: flex;
-}
-
 /* App.css */
-.contact-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  background-color: rgb(245, 245, 245);
-  min-height: 100vh;
-}
 
 
 /* Responsive design */
@@ -124,7 +125,11 @@ html, body {
   .menu-toggle {
     display: block;
   }
-
+  .Mission{
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+  }
   .nav-links {
     display: flex;
     flex-direction: column;
@@ -152,13 +157,5 @@ html, body {
   }
 }
 
-/* Main content sections */
-.main-content {
-  padding-top: 60px; /* Space for fixed navbar */
-  position: relative;
-  min-height: 100vh; /* Ensure content section takes full viewport height */
-  box-sizing: border-box;
-  margin-top: 800px;
-}
 
 

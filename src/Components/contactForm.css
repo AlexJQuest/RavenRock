@@ -1,20 +1,177 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    padding: 2%;
+/* General styles for the page */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensures full width of viewport */
+  height: 100%; /* Ensures the body takes full height */
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1%;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures it fills the entire width */
+  min-height: 100vh; /* Ensures full height */
+  padding: 50px;
+  background-color: rgba(1, 29, 65, 1);
+  color: white;
+}
+
+/* Style for the form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 60%;
+  max-width: 800px;
+  background-color: #161a31;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+  margin: 0 auto;
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+}
+
+.form-container > * {
+  margin: 12px 0;
+  width: 100%;
+}
+
+/* Heading and paragraph styles */
+.page-heading-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text-one {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.text-two {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+/* Styles for input fields */
+.input-field {
+  width: 95%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 2px solid rgba(252, 113, 137, 1);
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+/* Styles for the text area */
+.text-area {
+  width: 95%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 2px solid rgba(252, 113, 137, 1);
+  border-radius: 5px;
+  resize: none;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+.text-area:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+/* Styles for the submit button */
+.submit-button {
+  width: 98.5%;
+  padding: 14px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #690e0e;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles for tablet and mobile */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .page-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
   }
-  
-  h1, p {
-    margin: 0;
+
+  .form-container {
+    width: 100%;
+    padding: 15px;
   }
-  
-  input, textarea {
+
+  .text-one {
+    font-size: 24px;
+  }
+
+  .text-two {
+    font-size: 18px;
+  }
+
+  .input-field,
+  .text-area,
+  .submit-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 15px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .text-one {
+    font-size: 22px;
+  }
+
+  .text-two {
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
   }
-  
-  input:focus, textarea:focus {
-    outline: none;
+
+  .input-field,
+  .text-area,
+  .submit-button {
+    font-size: 14px;
+    padding: 10px;
   }
-  
+
+  .submit-button {
+    font-size: 16px;
+  }
+}
