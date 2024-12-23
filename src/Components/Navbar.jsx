@@ -52,7 +52,7 @@ const Navbar = ({ scrollToSection }) => {
               </section>
               
               
-              <section id="Mission" className="Mission" >
+              <section id="Missionpane" className="Missionpane" >
                 <Mission 
                   image={stairs} 
                   title="Our Core Values" 

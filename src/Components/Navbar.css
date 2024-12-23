@@ -87,7 +87,7 @@ html, body {
   margin: 0;
 }
 
-.Mission {
+.Missionpane {
   display: flex;
   width: 100vw;
   flex-direction: row;
@@ -128,26 +128,40 @@ html, body {
   width: 100%;
 }
 
+
+
+/* Tablet View (375px to 1024px wide) for Missionpane */
+@media (min-width: 375px) and (max-width: 1024px)  {
+  .Missionpane {
+    display: flex;
+    flex-direction: column; /* Ensure stacking of elements vertically */
+    width: 100%; /* Ensure Missionpane takes the full width of the screen *//* Add some padding around the container */
+  }
+
+}
+
+
 /* Responsive Design */
 @media (max-width: 375px) {
   /* iPhone SE (375px wide) */
   .container {
-    max-width: 100%; /* Ensure no overflow */
+    max-width: 375px; /* Ensure no overflow */
   }
 
   .main-content {
-    max-width: 100%;
+    max-width: 375px;
   }
 
   .menu-toggle {
     display: block;
   }
 
-  .Mission {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%; /* Ensure no horizontal overflow */
-  }
+  .Missionpane { 
+    flex-direction: column;/* Ensure padding for mobile */
+    height: auto;
+}
+/* Ensure each card inside the Missionpane is centered and takes full width */
+
 
   .nav-links {
     display: flex;
@@ -178,53 +192,5 @@ html, body {
   .logo {
     height: 40px;
     padding-left: 5%;
-  }
-}
-
-@media (max-width: 1024px) {
-  /* iPad Pro (1024px wide) */
-  .container {
-    max-width: 100%;
-  }
-
-  .main-content {
-    max-width: 100%;
-    padding-top: 80px;
-  }
-
-  .navbar {
-    padding: 10px 20px;
-  }
-
-  .logo {
-    height: 60px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    justify-content: flex-end;
-    transform: none;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-  }
-
-  .nav-links li {
-    margin: 0 15px;
-  }
-
-  .nav-links a {
-    font-size: 1.2rem;
-    padding: 0.5rem 1.5rem;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-
-  .Mission {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 }

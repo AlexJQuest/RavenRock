@@ -1,10 +1,10 @@
-/* Base styling */
+/* Base Styling for Mission Card Sections */
 .mission-container {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center-align items horizontally */
     justify-content: column; /* Center items vertically */
-    padding: 20px;
+    padding: 10px;
     background-color: #f7f7f7; /* Light background for contrast */
     min-height: 80px;
     width: 100%; /* Ensure full width */
@@ -49,76 +49,101 @@
     margin: 0; /* Remove default margin for consistency */
 }
 
-/* Mobile View (Optimized for small screens like iPhone SE or smaller screens) */
-@media (max-width: 667px) {
+
+/* Tablet View (Optimized for tablet screens between 375px and 1024px wide) */
+@media (min-width: 376px)and (max-width: 1024px)   {
     .mission-container {
-        max-width: 667px;
-        padding: 10px; /* Reduce padding for mobile */
+        /* Stack items vertically for tablets */
         flex-direction: column; /* Stack items vertically */
-        gap: 15px; /* Add spacing between elements */
-        width: 100%; /* Ensure container takes up full width */
+        gap: 15px; /* Adjust spacing between elements */
+        width: 100%; /* Ensure container takes full width */
+        padding: 0 10px; /* Provide padding on left and right for better layout */
     }
+
+    /* Image styling */
+    .top-image {
+        width: 100%; /* Ensure the image takes full width */
+        max-width: 98%; /* Slightly reduce the image size to fit well in the container */
+        border-radius: 30px; /* Add rounded corners to the image */
+        padding: 15px; /* Add space below the image */
+    }
+
+    /* Mission card styling */
+    .mission-card {
+        padding: 15px; /* Padding inside the cards */
+        width: 100%; /* Ensure the card takes up the full width of its container */
+        max-width: 100%; /* Limit the card width to prevent overflow */
+        margin: 0 auto; /* Center the cards within the container */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+        flex-direction: column; /* Stack card content vertically */
+        border-radius: 10px; /* Rounded corners for cards */
+        background-color: #fff; /* White background for cards */
+    }
+
+    /* Heading styling */
+    .mission-card h1 {
+        font-size: 25px; /* Adjust font size for tablets */
+        margin-bottom: 8px; /* Space below the heading */
+        text-align: center; /* Center the heading */
+    }
+
+    /* Subheading styling */
+    .mission-card h2 {
+        font-size: 21px; /* Adjust font size for subheading */
+        color: #ff0000; /* Red color for the subheading */
+        margin-bottom: 8px; /* Space below the subheading */
+        text-align: center; /* Center the subheading */
+    }
+
+    /* Paragraph styling */
+    .mission-card p {
+        font-size: 19px; /* Adjust font size for readability */
+        line-height: 1.5; /* Adjust line height for better readability */
+        color: #333; /* Dark color for paragraph text */
+        text-align: center; /* Center-align the paragraph text */
+        margin-top: 10px; /* Add space above the paragraph */
+    }
+}
+
+
+/* Mobile View (Optimized for small screens like iPhone SE or 375px width) */
+@media (max-width: 375px) {
+    .mission-container {
+        /* Reduce padding for mobile */
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Adjust spacing between elements */
+        width: 375px; /* Ensure container takes up full width */
+        padding: 5% 0%;
+    }
+    /* Ensure each card inside the Missionpane is centered and takes full width */
 
     .top-image {
         width: 100%; /* Make the image responsive */
-        max-width: 100%; /* Ensure it doesn't exceed container width */
+        max-width: 98%; /* Ensure it doesn't exceed container width */
         border-radius: 8px; /* Rounded corners for image */
     }
 
     .mission-card {
         padding: 15px; /* Reduce padding for mobile */
-        width: 100%; /* Full width */
+        width: 100%; /* Full width for card */
         max-width: 100%; /* Full width for card */
         box-shadow: none; /* Remove the box shadow for simpler design */
+        flex-direction: column; /* Ensure items are stacked vertically */
     }
 
     .mission-card h1 {
-        font-size: 20px; /* Adjust heading size for mobile */
-        margin-bottom: 10px; /* Add spacing below heading */
+        font-size: 18px; /* Adjust heading size for mobile */
+        margin-bottom: 8px; /* Add spacing below heading */
     }
 
     .mission-card h2 {
-        font-size: 16px; /* Adjust subheading size */
+        font-size: 14px; /* Adjust subheading size */
         color: #ff0000; /* Keep the color consistent */
     }
 
     .mission-card p {
-        font-size: 14px; /* Adjust paragraph font size */
+        font-size: 12px; /* Adjust paragraph font size */
         line-height: 1.4; /* Adjust line height for readability */
-    }
-
-    .mission-card p {
         margin-top: 10px; /* Add spacing above paragraph */
-    }
-}
-
-
-/* Tablet View (Optimized for iPads and larger tablets) */
-@media (max-width: 1024px) {
-    .mission-container {
-        padding: 15px; /* Reduce padding for tablets */
-        width: 100%; /* Ensure container takes up full width */
-    }
-
-    .top-image {
-        width: 85%; /* Adjust image size for tablets */
-        max-width: 100%; /* Ensure image scales properly */
-    }
-
-    .mission-card {
-        width: 90%; /* Limit card width for tablets */
-        padding: 18px; /* Adjust card padding */
-    }
-
-    .mission-card h1 {
-        font-size: 26px; /* Slightly larger heading for tablets */
-    }
-
-    .mission-card h2 {
-        font-size: 22px; /* Slightly larger subheading */
-    }
-
-    .mission-card p {
-        font-size: 16px; /* Adjust paragraph font size */
     }
 }
