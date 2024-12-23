@@ -70,7 +70,7 @@
 
 
 /* Tablet View (Optimized for tablet screens like iPad, Nexus 7, etc.) */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .hero-section, .hero-section2 {
     padding: 4% 0%; /* Adjust padding for tablets */
     flex-direction: column; /* Stack columns vertically */
@@ -131,9 +131,8 @@
 }
 
 
-
 /* Mobile View (Optimized for small screens like iPhone SE or smaller screens) */
-@media (max-width: 375px) {
+@media (max-width: 430px) {
   .hero-section, .hero-section2 {
     padding: 2% 0%;
     flex-direction: column; /* Stack columns vertically */
@@ -190,4 +189,3 @@
     margin-bottom: 12px; /* Reduce margin to bring p closer to other elements */
   }
 }
-

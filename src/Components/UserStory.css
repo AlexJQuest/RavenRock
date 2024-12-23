@@ -6,6 +6,7 @@
     padding: 50px 20px; /* Increased top padding to make space for the profile image */
     background-color: #f7f7f7; /* Light background for contrast */
     width: 100%; /* Ensure the container takes up full width */
+    min-height: 40vh; /* Ensure full viewport height for centering */
 }
 
 /* Profile card styling */

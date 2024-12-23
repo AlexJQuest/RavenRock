@@ -29,45 +29,49 @@ const ContactForm = () => {
           <h1 className="text-one">Contact Us</h1>
           <p className="text-two">Any questions or remarks? Just write us a message.</p>
         </div>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="input-field"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="input-field"
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            className="input-field"
-          />
-          <textarea
-            name="message"
-            placeholder="Write your message"
-            rows="5"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            className="text-area"
-          />
-          <button type="submit" className="submit-button">Send Message</button>
-        </form>
+        <div className="form-elements">
+          <form onSubmit={handleSubmit}>
+            <div className='inputboxes'>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="input-field"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="input-field"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="input-field"
+              />
+              <textarea
+                name="message"
+                placeholder="Write your message"
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="text-area"
+              />
+            </div>
+           <div className='subbutton'> <button type="submit" className="submit-button">Send Message</button></div>
+          </form>
+        </div>
       </div>
     </div>
   );

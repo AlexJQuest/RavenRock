@@ -2,111 +2,98 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%; /* Ensures full width of viewport */
-  height: 100%; /* Ensures the body takes full height */
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
 }
 
 .page-wrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1%;
   justify-content: center;
-  align-items: center;
-  width: 100%; /* Ensures it fills the entire width */
-  min-height: 100vh; /* Ensures full height */
-  padding: 50px;
+  align-items: flex-start;
+  height: 100%;
+  padding: 30px;
   background-color: rgba(1, 29, 65, 1);
+}
+
+.form-container {
+  background-color: #161a31;
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-heading-wrapper {
+  text-align: center;
   color: white;
 }
 
-/* Style for the form container */
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  width: 60%;
-  max-width: 800px;
-  background-color: #161a31;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s;
-  margin: 0 auto;
-}
-
-.form-container:hover {
-  transform: scale(1.02);
-}
-
-.form-container > * {
-  margin: 12px 0;
-  width: 100%;
-}
-
-/* Heading and paragraph styles */
-.page-heading-wrapper {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
 .text-one {
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: bold;
 }
 
 .text-two {
-  font-size: 20px;
-  margin-bottom: 25px;
+  font-size: 18px;
+  margin-bottom: 24px;
+  font-weight: lighter;
 }
 
-/* Styles for input fields */
-.input-field {
-  width: 95%;
-  padding: 14px;
-  margin: 12px 0;
-  border: 2px solid rgba(252, 113, 137, 1);
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  font-size: 16px;
+/* Form Elements */
+.form-elements {
+  display: flex;
+  flex-direction: column;  /* Stack input fields and button vertically */
+  gap: 20px;
 }
 
-.input-field:focus {
-  outline: none;
-  border-color: #ff0000;
+.inputboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Styles for the text area */
+.input-field,
 .text-area {
-  width: 95%;
+  width: 100%;  /* Ensure input fields are full width */
   padding: 14px;
-  margin: 12px 0;
-  border: 2px solid rgba(252, 113, 137, 1);
-  border-radius: 5px;
-  resize: none;
-  background-color: white;
-  color: black;
   font-size: 16px;
+  border: 2px solid #fc7189;
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+  transition: border-color 0.3s ease;
 }
 
+.input-field:focus,
 .text-area:focus {
   outline: none;
   border-color: #ff0000;
 }
 
-/* Styles for the submit button */
+.text-area {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Submit Button */
 .submit-button {
-  width: 98.5%;
-  padding: 14px;
+  margin-top: 15px;
+  width: 105%;  /* Make the submit button full width to match input fields */
   background-color: #ff0000;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   font-size: 18px;
-  transition: background-color 0.3s, transform 0.2s;
+  padding: 14px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  border-radius: 8px;
 }
 
 .submit-button:hover {
@@ -114,27 +101,146 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* Responsive styles for tablet and mobile */
 
-/* Tablet View */
+/* Details Bar */
+.details-bar {
+  background-color: rgb(8, 8, 63);
+  width: 100%;
+  max-width: 800px;  /* Same width as form container */
+  height: 100%; /* Same height as form container */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.details-bar h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.details-bar p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Social Icons */
+.social-icons a {
+  margin: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.circles {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;  /* Center items horizontally */
+  align-items: center;      /* Center items vertically */
+}
+
+.big-circle,
+.small-circle {
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.big-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+}
+
+.small-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #690e0e;
+}
+
+/* Responsive Styles */
+
+/* Tablet View (max-width: 1024px) */
 @media (max-width: 1024px) {
   .page-wrapper {
     flex-direction: column;
-    padding: 20px;
-    justify-content: flex-start;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+  }
+
+  .details-bar {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .text-one {
+    font-size: 26px;
+  }
+
+  .text-two {
+    font-size: 16px;
+  }
+
+  .input-field,
+  .text-area,
+  .submit-button {
+    font-size: 14px;
+  }
+
+  .details-bar h2 {
+    font-size: 24px;
+  }
+
+  .details-bar p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile View (max-width: 375px) */
+@media (max-width: 375px) {
+  .page-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
   }
 
   .form-container {
     width: 100%;
-    padding: 15px;
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .details-bar {
+    width: 100%;
+    margin-right: 0;
   }
 
   .text-one {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .text-two {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .input-field,
@@ -143,36 +249,16 @@ html, body {
     font-size: 14px;
     padding: 12px;
   }
-}
 
-/* Mobile View */
-@media (max-width: 375px) {
-  .page-wrapper {
-    padding: 15px;
-  }
-
-  .form-container {
-    width: 100%;
-    padding: 15px;
-    max-width: 375px;
-  }
-
-  .text-one {
+  .details-bar h2 {
     font-size: 22px;
   }
 
-  .text-two {
-    font-size: 16px;
-  }
-
-  .input-field,
-  .text-area,
-  .submit-button {
+  .details-bar p {
     font-size: 14px;
-    padding: 10px;
   }
 
-  .submit-button {
-    font-size: 16px;
+  .contact-info {
+    align-items: flex-start;
   }
 }
