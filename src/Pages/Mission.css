@@ -50,7 +50,7 @@
 }
 
 /* Mobile View (Optimized for screens like iPhone SE or 375px width) */
-@media (max-width: 1023px) and (min-width: 375px) {
+@media  (min-width: 375px) {
     .mission-container {
         flex-direction: column; /* Stack items vertically */
         gap: 10px; /* Adjust spacing between elements */
@@ -69,7 +69,7 @@
     .mission-card {
         padding: 15px; /* Padding inside the cards */
         width: 100%; /* Full width for card */
-        max-width: 100%; /* Full width for card */
+        max-width: 90%; /* Full width for card */
         box-shadow: none; /* Remove box shadow for a cleaner look */
         flex-direction: column; /* Stack items vertically */
         margin: 0 auto; /* Center the card */
