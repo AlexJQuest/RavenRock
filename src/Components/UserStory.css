@@ -36,22 +36,24 @@
     z-index: 1; /* Ensure image appears on top */
 }
 
-/* Name styling */
-h1 {
+/* Name styling for .profilecard h1 */
+.profilecard h1,
+.profilecard2 h1 {
     font-size: 20px; /* Font size for name */
-    margin-top: -30px; /* Adjust margin due to image overlap */
     color: #333; /* Dark text */
 }
 
-/* Subtitle styling */
-h2 {
+/* Subtitle styling for .profilecard h2 */
+.profilecard h2,
+.profilecard2 h2 {
     font-size: 16px; /* Subtitle font size */
     color: #ff0000; /* Optional red subtitle */
     margin-bottom: 15px;
 }
 
-/* Comment styling */
-p {
+/* Comment styling for .profilecard p */
+.profilecard p,
+.profilecard2 p {
     font-size: 16px; /* Font size for comment */
     line-height: 1.5; /* Line height for readability */
     color: #666; /* Softer text color */
@@ -85,16 +87,19 @@ p {
         top: -40px; /* Adjust image overlap position */
     }
 
-    h1 {
+    .profilecard h1,
+    .profilecard2 h1 {
         font-size: 18px; /* Adjust font size for name */
         margin-top: -20px; /* Adjust margin due to image overlap */
     }
 
-    h2 {
+    .profilecard h2,
+    .profilecard2 h2 {
         font-size: 14px; /* Adjust subtitle font size */
     }
 
-    p {
+    .profilecard p,
+    .profilecard2 p {
         font-size: 14px; /* Adjust comment font size */
         margin-bottom: 10px; /* Reduce bottom margin */
     }
@@ -121,15 +126,18 @@ p {
         top: -45px; /* Adjust overlap */
     }
 
-    h1 {
+    .profilecard h1,
+    .profilecard2 h1 {
         font-size: 19px; /* Slightly adjust font size for name */
     }
 
-    h2 {
+    .profilecard h2,
+    .profilecard2 h2 {
         font-size: 15px; /* Adjust subtitle font size */
     }
 
-    p {
+    .profilecard p,
+    .profilecard2 p {
         font-size: 15px; /* Adjust paragraph font size */
     }
 

@@ -3,58 +3,65 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  height: 100%; /* Ensure html and body take full height */
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Container styling */
 .container {
   position: relative;
-  height: auto; /* Allow height to adjust based on content */
+  width: 100%; /* Ensure the container never exceeds the width of the viewport */
+  height: auto;
+  overflow-x: hidden; /* Prevent horizontal overflow within container */
 }
 
 /* Background video styling */
 .background-video {
-  position: fixed; /* Fix the video to cover the viewport */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Cover the entire viewport */
-  object-fit: cover; /* Ensure the video covers the container */
-  z-index: -1; /* Place the video behind other content */
-  overflow: hidden; /* Ensure no overflow from video */
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  overflow: hidden; /* Ensure video doesn't cause overflow */
 }
+
 /* Main content sections */
 .main-content {
-  padding-top: 60px; /* Space for fixed navbar */
+  padding-top: 60px;
   position: center;
-  min-height: 100vh; /* Ensure content section takes full viewport height */
+  min-height: 100vh;
   box-sizing: border-box;
   margin-top: 800px;
+  width: 100%; /* Ensure content does not overflow horizontally */
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Navbar styling */
 .navbar {
   top: 0;
-  position: fixed; /* Fixed position to keep navbar at the top */
-  
+  position: fixed;
   left: 0;
-  height: 60px; /* Set height for navbar */
+  height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px; /* Padding for navbar */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 40px;
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   box-sizing: border-box;
-  z-index: 1; /* Ensure navbar is above the video */
+  z-index: 1;
+  overflow-x: hidden; /* Prevent navbar from causing horizontal scroll */
 }
 
 /* Logo styling */
 .logo {
   height: 50px;
   padding-left: 10%;
-  transition: height 0.3s ease, padding-left 0.3s ease; /* Smooth transitions */
+  transition: height 0.3s ease, padding-left 0.3s ease;
+  max-width: 100%; /* Prevent the logo from overflowing */
 }
 
 .logo:hover {
@@ -79,62 +86,74 @@ html, body {
   padding: 0;
   margin: 0;
 }
-.Mission{
+
+.Mission {
   display: flex;
   width: 100vw;
   flex-direction: row;
+  overflow-x: hidden; /* Prevent overflow */
 }
 
 .nav-links li {
   margin: 0 10px;
 }
+
 .nav-links a {
-  display: inline-block; /* Ensures the links behave like blocks for padding */
-  text-decoration: none; /* Removes default underline */
-  color: #ffffff; /* Base link color */
-  font-size: 1rem; /* Adjust font size as needed */
-  padding: 0.5rem 1rem; /* Add clickable space */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth animations */
-  position: relative; /* For underline animation */
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
 .nav-links a::after {
-  content: ""; /* Creates the underline */
+  content: "";
   position: absolute;
-  bottom: 0; /* Positions underline at the bottom of the link */
+  bottom: 0;
   left: 0;
-  width: 0; /* Initially hidden */
-  height: 2px; /* Thickness of underline */
-  background-color: #ff0000; /* Underline color */
-  transition: width 0.3s ease; /* Smooth animation for the underline */
+  width: 0;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ff0000;; /* Changes text color on hover */
-  transform: scale(1.05); /* Slight scaling for emphasis */
+  color: #ff0000;
+  transform: scale(1.05);
 }
 
 .nav-links a:hover::after {
-  width: 100%; /* Reveals the underline */
+  width: 100%;
 }
-/* App.css */
 
+/* Responsive Design */
+@media (max-width: 375px) {
+  /* iPhone SE (375px wide) */
+  .container {
+    max-width: 100%; /* Ensure no overflow */
+  }
 
-/* Responsive design */
-@media (max-width: 768px) {
+  .main-content {
+    max-width: 100%;
+  }
+
   .menu-toggle {
     display: block;
   }
-  .Mission{
+
+  .Mission {
     display: flex;
     flex-direction: column;
-    max-width: 768px;
+    max-width: 100%; /* Ensure no horizontal overflow */
   }
+
   .nav-links {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust based on navbar height */
+    top: 60px;
     right: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
@@ -155,7 +174,57 @@ html, body {
   .nav-links a {
     display: block;
   }
+
+  .logo {
+    height: 40px;
+    padding-left: 5%;
+  }
 }
 
+@media (max-width: 1024px) {
+  /* iPad Pro (1024px wide) */
+  .container {
+    max-width: 100%;
+  }
 
+  .main-content {
+    max-width: 100%;
+    padding-top: 80px;
+  }
 
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-end;
+    transform: none;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .Mission {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

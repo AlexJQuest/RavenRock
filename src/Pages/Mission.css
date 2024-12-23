@@ -50,8 +50,9 @@
 }
 
 /* Mobile View (Optimized for small screens like iPhone SE or smaller screens) */
-@media (max-width: 768px) {
+@media (max-width: 667px) {
     .mission-container {
+        max-width: 667px;
         padding: 10px; /* Reduce padding for mobile */
         flex-direction: column; /* Stack items vertically */
         gap: 15px; /* Add spacing between elements */

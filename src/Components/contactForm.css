@@ -146,7 +146,7 @@ html, body {
 }
 
 /* Mobile View */
-@media (max-width: 480px) {
+@media (max-width: 375px) {
   .page-wrapper {
     padding: 15px;
   }
@@ -154,6 +154,7 @@ html, body {
   .form-container {
     width: 100%;
     padding: 15px;
+    max-width: 375px;
   }
 
   .text-one {
