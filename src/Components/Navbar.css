@@ -49,34 +49,29 @@ html, body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background: rgba(1, 29, 65, 0.637); /* Default background */
+  color: #000000;
   box-sizing: border-box;
-  z-index: 1;
-  overflow-x: hidden; /* Prevent navbar from causing horizontal scroll */
 }
+
 
 /* Logo styling */
 .logo {
   height: 50px;
-  padding-left: 10%;
   transition: height 0.3s ease, padding-left 0.3s ease;
   max-width: 100%; /* Prevent the logo from overflowing */
 }
 
-.logo:hover {
-  height: 55px;
-  padding-left: 10%;
-}
-
 /* Menu toggle button (for mobile) */
 .menu-toggle {
-  display: none;
+  display: none; /* Hide by default */
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: #fff;
+  color: #000000;
   cursor: pointer;
+  
+  z-index: 2; /* Ensure toggle button is always above other elements */
 }
 
 /* Navigation links styling */
@@ -85,13 +80,6 @@ html, body {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.Missionpane {
-  display: flex;
-  width: 100vw;
-  flex-direction: row;
-  overflow-x: hidden; /* Prevent overflow */
 }
 
 .nav-links li {
@@ -108,6 +96,10 @@ html, body {
   position: relative;
 }
 
+/* Disabled state for links */
+
+
+/* Nav links hover effect */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -127,57 +119,37 @@ html, body {
 .nav-links a:hover::after {
   width: 100%;
 }
-
-
-
-/* Tablet View (375px to 1024px wide) for Missionpane */
-@media (min-width: 375px) and (max-width: 1024px)  {
-  .Missionpane {
-    display: flex;
-    flex-direction: column; /* Ensure stacking of elements vertically */
-    width: 100%; /* Ensure Missionpane takes the full width of the screen *//* Add some padding around the container */
-  }
-
-}
-
-
-/* Responsive Design */
-@media (max-width: 375px) {
-  /* iPhone SE (375px wide) */
+/* Mobile (Responsive Design) */
+@media (max-width: 430px) {
   .container {
-    max-width: 375px; /* Ensure no overflow */
+    max-width: 430px; /* Ensure no overflow */
   }
 
   .main-content {
-    max-width: 375px;
+    max-width: 430px;
   }
 
   .menu-toggle {
     display: block;
+    filter: invert(1);
   }
 
-  .Missionpane { 
-    flex-direction: column;/* Ensure padding for mobile */
-    height: auto;
-}
-/* Ensure each card inside the Missionpane is centered and takes full width */
-
-
   .nav-links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
+    position: fixed;
+    top: 60px; /* Align below the navbar */
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-100%);
+    right: 0;
+    background-color: rgba(1, 29, 65, 0);
+    transform: translateY(-100%); /* Hide menu off-screen initially */
     transition: transform 0.3s ease;
-    padding: 0;
+    flex-direction: column;
+    height: 100vh; /* Ensure it takes up full height */
+    z-index: 1;
   }
 
   .nav-links.open {
-    transform: translateY(0);
+    transform: translateY(0); /* Slide in menu */
+    background-color: rgba(1, 29, 65, 0.637);
   }
 
   .nav-links li {
@@ -187,10 +159,59 @@ html, body {
 
   .nav-links a {
     display: block;
+    font-size: 1.6rem; /* Larger font for readability on mobile */
   }
 
   .logo {
     height: 40px;
     padding-left: 5%;
+  }
+
+  .navbar.closed {
+    background-color: rgba(255, 255, 255, 0); /* Transparent background when the menu is closed */
+  }
+
+  .navbar.open { 
+    background-color: rgba(1, 29, 65, 0.637); /* Normal background when menu is open */
+  }
+}
+
+/* Tablet - 820px */
+@media (max-width: 820px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    height: 45px; /* Slightly smaller logo */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Adjust font size for tablet */
+    padding: 0.4rem 0.8rem;
+  }
+
+  .nav-links li {
+    margin: 0 5px; /* Adjust margin for smaller screen */
+  }
+}
+
+/* Tablet and Desktop - 1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 30px; /* Adjust padding */
+  }
+
+  .logo {
+    height: 50px; /* Keep the logo at its original size */
+  }
+
+  .nav-links a {
+    font-size: 1rem; /* Keep the font size normal */
+    padding: 0.5rem 1rem; /* Maintain consistent padding */
+  }
+
+  .nav-links li {
+    margin: 0 10px; /* Standard margin for 1024px screens */
   }
 }
