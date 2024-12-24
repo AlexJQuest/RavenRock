@@ -32,11 +32,19 @@ const Navbar = ({ scrollToSection }) => {
       </nav>
 
       <div className="main-content">
+<<<<<<< HEAD
         <section id="MainContent" className="MainContent">
           <video className="background-video" autoPlay muted loop>
             <source src="/RavenRock/bgvideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+=======
+          <section id="home" className="hero-section">
+            <video className="background-video" autoPlay muted loop>
+              <source src="/https://github.com/AlexJQuest/RavenRock/blob/gh-pages/bgvideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+>>>>>>> e3930eef74428c6cc6b020b6b43f489bf496f6eb
 
           <div className='page-content'>
             <section id="Hero" className="section">
