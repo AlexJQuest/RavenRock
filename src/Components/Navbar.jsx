@@ -69,13 +69,39 @@ const Navbar = ({ scrollToSection }) => {
             </section>
 
             <section id="UserStories" className="UserStories">
-              <UserStory
-                image="../pics/logo.jpeg"
-                title="Adrian Alex Jacobs"
-                subtitle="Web Developer & Designer"
-                content="Amazing work and attention to detail!"
-                stars={5} // Pass an integer for the rating (1 to 5)
-              />
+              <div className='userstoryentries'>
+                <UserStory
+                  image="../pics/logo.jpeg"
+                  title="Adrian Alex Jacobs"
+                  subtitle="Web Developer & Designer"
+                  content="Amazing work and attention to detail!"
+                  stars={5} // Pass an integer for the rating (1 to 5)
+                />
+  
+                <UserStory
+                                image="../pics/logo.jpeg"
+                                title="Adrian Alex Jacobs"
+                                subtitle="Web Developer & Designer"
+                                content="Amazing work and attention to detail!"
+                                stars={5} // Pass an integer for the rating (1 to 5)
+                              />
+                
+                <UserStory
+                                image="../pics/logo.jpeg"
+                                title="Adrian Alex Jacobs"
+                                subtitle="Web Developer & Designer"
+                                content="Amazing work and attention to detail!"
+                                stars={5} // Pass an integer for the rating (1 to 5)
+                              />
+                
+                <UserStory
+                                image="../pics/logo.jpeg"
+                                title="Adrian Alex Jacobs"
+                                subtitle="Web Developer & Designer"
+                                content="Amazing work and attention to detail!"
+                                stars={5} // Pass an integer for the rating (1 to 5)
+                              />
+              </div>
             </section>
 
             <section id="Contact-page" className="Contact-page">

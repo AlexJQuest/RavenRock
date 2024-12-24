@@ -1,7 +1,7 @@
 /* Base Styling for Mission Card Sections */
 .mission-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; /* Stack items vertically by default (mobile-first approach) */
     align-items: center; /* Center-align items horizontally */
     justify-content: center; /* Center items vertically */
     padding: 10px;
@@ -29,6 +29,7 @@
     flex-direction: column; /* Stack card elements vertically */
     align-items: center; /* Center-align card content */
     gap: 15px; /* Add spacing between card content */
+    
 }
 
 .mission-card h1 {

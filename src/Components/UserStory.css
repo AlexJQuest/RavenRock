@@ -6,7 +6,6 @@
     padding: 50px 20px; /* Increased top padding to make space for the profile image */
     background-color: #f7f7f7; /* Light background for contrast */
     width: 100%; /* Ensure the container takes up full width */
-    min-height: 40vh; /* Ensure full viewport height for centering */
 }
 
 /* Profile card styling */
@@ -20,6 +19,7 @@
     max-width: 400px; /* Max width for card */
     position: relative;
     overflow: visible; /* Allow the image to overflow */
+    z-index: -1;
 }
 
 /* Profile image styling */
@@ -34,7 +34,7 @@
     position: relative;
     top: -50px; /* Move upwards to overlap card */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for image */
-    z-index: 1; /* Ensure image appears on top */
+    z-index: 0; /* Ensure image appears on top */
 }
 
 /* Name styling for .profilecard h1 */
@@ -70,16 +70,20 @@
 }
 
 /* Mobile View (Optimized for small screens like iPhone SE or smaller screens) */
-@media (max-width: 768px) {
+@media (max-width: 3908px) {
+
     .UserStory {
         padding: 30px 10px; /* Reduce padding for mobile */
+        width: -50%;
         flex-direction: column; /* Stack profile image and card vertically */
         align-items: center; /* Center content */
+        z-index: 0;
     }
 
     .profilecard {
         max-width: 90%; /* Allow card to fill more of the screen */
         padding: 15px; /* Reduce padding for mobile */
+        z-index: 0;
     }
 
     .profileimage {
@@ -119,6 +123,7 @@
     .profilecard {
         max-width: 80%; /* Allow card to fill more of the screen on tablets */
         padding: 18px; /* Adjust padding for tablets */
+        z-index: 0;
     }
 
     .profileimage {

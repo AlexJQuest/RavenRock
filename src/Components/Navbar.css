@@ -96,7 +96,6 @@ html, body {
   position: relative;
 }
 
-/* Disabled state for links */
 
 
 /* Nav links hover effect */
@@ -119,6 +118,22 @@ html, body {
 .nav-links a:hover::after {
   width: 100%;
 }
+
+.Missionpane{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.UserStories{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  z-index: 0;
+}
+
 /* Mobile (Responsive Design) */
 @media (max-width: 430px) {
   .container {
@@ -129,6 +144,12 @@ html, body {
     max-width: 430px;
   }
 
+  .Missionpane{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+  }
   .menu-toggle {
     display: block;
     filter: invert(1);
@@ -175,6 +196,11 @@ html, body {
   .navbar.open { 
     background-color: rgba(1, 29, 65, 0.637); /* Normal background when menu is open */
   }
+
+ .UserStories{
+  display: flex;
+  flex-direction: row;
+ }
 }
 
 /* Tablet - 820px */
@@ -183,6 +209,12 @@ html, body {
     padding: 10px 20px;
   }
 
+  .Missionpane{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+  }
   .logo {
     height: 45px; /* Slightly smaller logo */
   }
@@ -202,6 +234,7 @@ html, body {
   .navbar {
     padding: 10px 30px; /* Adjust padding */
   }
+  
 
   .logo {
     height: 50px; /* Keep the logo at its original size */
