@@ -52,6 +52,7 @@ html, body {
   background: rgba(1, 29, 65, 0.637); /* Default background */
   color: #000000;
   box-sizing: border-box;
+  z-index: 100;
 }
 
 
@@ -127,11 +128,19 @@ html, body {
 }
 
 .UserStories{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+
   background-color: #ffffff;
-  z-index: 0;
+
+}
+
+.userstoryentries{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  z-index: -5;
 }
 
 /* Mobile (Responsive Design) */
@@ -227,6 +236,10 @@ html, body {
   .nav-links li {
     margin: 0 5px; /* Adjust margin for smaller screen */
   }
+}
+
+.Contact-page{
+  background-color: rgba(1, 29, 65, 0.863);
 }
 
 /* Tablet and Desktop - 1024px */

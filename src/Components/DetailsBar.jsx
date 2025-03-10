@@ -11,11 +11,11 @@ const DetailsBar = () => {
 
       <div className="contact-info">
         <div className="contact-item">
-          <FaPhone color="white " />
+          <FaPhone color="white" />
           <span>+233543201893</span>
         </div>
         <div className="contact-item">
-          <FaEnvelope color="white " />
+          <FaEnvelope color="white" />
           <span>ravenrockcontractors@gmail.com</span>
         </div>
       </div>

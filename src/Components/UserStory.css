@@ -1,8 +1,10 @@
 /* Outer container for centering the card */
 .UserStory {
     display: flex;
+    
     justify-content: center;
     align-items: center;
+    max-width: 400px; /* Max width for card */
     padding: 50px 20px; /* Increased top padding to make space for the profile image */
     background-color: #f7f7f7; /* Light background for contrast */
     width: 100%; /* Ensure the container takes up full width */
@@ -10,13 +12,13 @@
 
 /* Profile card styling */
 .profilecard {
+    flex-direction: row;
     background-color: #fff; /* White background for the card */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
     text-align: center; /* Center-align text */
     padding: 20px;
     width: 100%;
-    max-width: 400px; /* Max width for card */
     position: relative;
     overflow: visible; /* Allow the image to overflow */
     z-index: -1;
@@ -73,7 +75,7 @@
 @media (max-width: 3908px) {
 
     .UserStory {
-        padding: 30px 10px; /* Reduce padding for mobile */
+
         width: -50%;
         flex-direction: column; /* Stack profile image and card vertically */
         align-items: center; /* Center content */
