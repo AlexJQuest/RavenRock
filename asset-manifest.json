@@ -1,22 +1,28 @@
 {
   "files": {
     "main.css": "/RavenRock/static/css/main.a102b7d4.css",
-    "main.js": "/RavenRock/static/js/main.fc944484.js",
+    "main.js": "/RavenRock/static/js/main.b28a477c.js",
     "static/js/488.09b665b9.chunk.js": "/RavenRock/static/js/488.09b665b9.chunk.js",
     "static/media/structures.png": "/RavenRock/static/media/structures.44b159f875156de15a61.png",
     "static/media/stairs.png": "/RavenRock/static/media/stairs.d4a0c1e2b34b6733d9c2.png",
-    "static/media/logo.jpeg": "/RavenRock/static/media/logo.1fcd435ec3db87457b77.jpeg",
+    "static/media/bathroom(7).jpeg": "/RavenRock/static/media/bathroom(7).4d64bf2167d1a07fb25a.jpeg",
+    "static/media/stove.jpeg": "/RavenRock/static/media/stove.16dba97a18fa88874143.jpeg",
+    "static/media/bathroom.jpeg": "/RavenRock/static/media/bathroom.d07aeec9683ef43ef84f.jpeg",
+    "static/media/kitchen.jpeg": "/RavenRock/static/media/kitchen.6a65aa77c09c08c2bfc4.jpeg",
+    "static/media/kitchen3.jpeg": "/RavenRock/static/media/kitchen3.9663498d73cb305037a6.jpeg",
+    "static/media/kitchen2.jpeg": "/RavenRock/static/media/kitchen2.9991edacd1920bcade83.jpeg",
     "static/media/69270745-b8c8-44cd-bc86-617f9fe0a4b8.jpg": "/RavenRock/static/media/69270745-b8c8-44cd-bc86-617f9fe0a4b8.02b2738d0c297161e000.jpg",
     "static/media/6193942e-75ad-4f96-88fd-a131fb43abfd.jpg": "/RavenRock/static/media/6193942e-75ad-4f96-88fd-a131fb43abfd.5ca4ec9a9114ce2e3166.jpg",
+    "static/media/userstory.jpeg": "/RavenRock/static/media/userstory.bd82f115d449a011a5f5.jpeg",
     "static/media/Textlogo.jpeg": "/RavenRock/static/media/Textlogo.eeedb7134ae13acd43cd.jpeg",
     "static/media/logo.svg": "/RavenRock/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/RavenRock/index.html",
     "main.a102b7d4.css.map": "/RavenRock/static/css/main.a102b7d4.css.map",
-    "main.fc944484.js.map": "/RavenRock/static/js/main.fc944484.js.map",
+    "main.b28a477c.js.map": "/RavenRock/static/js/main.b28a477c.js.map",
     "488.09b665b9.chunk.js.map": "/RavenRock/static/js/488.09b665b9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a102b7d4.css",
-    "static/js/main.fc944484.js"
+    "static/js/main.b28a477c.js"
   ]
 }
